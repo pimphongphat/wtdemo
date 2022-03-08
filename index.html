@@ -82,23 +82,43 @@
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <p></p>
             <div class="row">
-                <div class="col-md-1" style="padding-left: 30px;">
-                    <p class="text-right">รหัสร้านค้า : </p>
-                    <p class="text-right">ชื่อร้านค้า : </p>
-                    <p class="text-right">ที่อยู่ : </p>
-                    <p class="text-right">Tel. : </p>
-                    <p class="text-right">Mobile : </p>
-                    <p class="text-right">หมายเหตุ : </p>
-
-                </div>
-                <div class="col-md-11" style="padding-left: 30px;">
-                    <p>C00001</p>
-                    <p>บริษัท แสงเจริญพัฒนาเอ็นเตอร์ไพรส์ จำกัด</p>
-                    <p>438/12-13 ถนนลาดพร้าว แขวงจอมพล เขตจตุจักร จังหวัดกรุงเทพมหานคร 10900</p>
-                    <p>02-9383046-8</p>
-                    <p>087-8988888</p>
-                    <p>ขนส่งที่ใช้ บริษัทส่ง</p>
-
+                <!-- <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-6 control-label">รหัสสินค้า</label>
+                        <div class="col-sm-12">
+                            <select id="product_code" name="product_code" class="form-control" required="">
+                                <option value="WT-001">WT-001</option>
+                                <option value="WC-301">WC-301</option>
+                                <option value="WC-302">WC-302</option>
+                            </select>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-md-6" style="padding-left: 30px;">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">รหัสร้านค้า :</label>
+                        <input type="text" id="" name="">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">ชื่อร้านค้า :</label>
+                        <input type="text" id="" name="">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">ที่อยู่ :</label>
+                        <textarea id="" name=""></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Tel. :</label>
+                        <input type="text" id="" name="">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Mobile :</label>
+                        <input type="text" id="" name="">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">ขนส่งที่ใช้ :</label>
+                        <textarea id="" name=""></textarea>
+                    </div>
                 </div>
             </div>
         </div>
@@ -820,10 +840,16 @@
             width: '100px'
         });
 
-        $('#product_category').select2({
+        $('#update-form #product_category').select2({
             // placeholder: 'Select an option',
             width: '100px'
         });
+
+        $('#update-form #product_code').select2({
+            // placeholder: 'Select an option',
+            width: '100px'
+        });
+
 
     });
 </script>
