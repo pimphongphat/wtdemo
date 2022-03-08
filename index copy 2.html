@@ -28,126 +28,10 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-
-
 </head>
 
 <body>
-    <!-- <br>
-    <div class="row">
-        <div class="col-sm-6">
-            <div id="container"></div>
-            <label for="SaleRep">เขตการขาย :</label>
-            <select name="SaleRep" id="SaleRep">
-                </select><br>
-            <label for="sales_name">พนักงานขาย :</label>
-            <input type="text" id="sales_name" name="sales_name" disabled>
-            <div>
-                <button id="generate">Generate</button>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a>
-        </div>
-    </div> -->
-    <br>
-
-    <div class="row">
-        <div class="col-md-4" style="padding-left: 30px;"> <img src="images/logo_precision.jpg" width="166" height="75" alt="" /></div>
-        <div class="col-md-4"> <label for="SaleRep">เขตการขาย :</label>
-            <select name="SaleRep" id="SaleRep">
-                </select><br>
-            <label for="sales_name">พนักงานขาย :</label>
-            <input type="text" id="sales_name" name="sales_name" disabled>
-            <div>
-                <button id="generate">Generate</button>
-            </div>
-        </div>
-        <div class="col-md-4">รหัสลูกค้า : <input type="text" id="customer_code" name="customer_code"></div>
-
-    </div>
-
-    <br>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Customer</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="order-tab" data-toggle="tab" href="#order" role="tab" aria-controls="order" aria-selected="false">Order</a>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-            <p>รหัสร้านค้า : <br> ชื่อร้านค้า : <br> ที่อยู่ : <br> Tel. : <br> Mobile : <br>
-            </p>
-
-        </div>
-        <div class="tab-pane fade" id="order" role="tabpanel" aria-labelledby="order-tab">
-
-            <a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a>
-            <table id="example" class="display nowrap" style="width:100%">
-                <thead>
-                    <tr>
-                        <th rowspan="2">ลำดับที่</th>
-                        <th rowspan="2">ประเภทสินค้า</th>
-                        <th rowspan="2">รหัสสินค้า</th>
-                        <th rowspan="2">ชื่อ/ชนิดสินค้า</th>
-                        <th colspan="3">ส่วนลด%</th>
-                        <th rowspan="2">เครดิต</th>
-                        <th rowspan="2">ลดเงินสด/(เครดิต)</th>
-                        <th colspan="2">ส่วนลดเป้า</th>
-                        <th colspan="6">จำนวนซื้อ+แถม</th>
-                        <th rowspan="2">วันที่ต้องการสินค้า</th>
-                        <th rowspan="2">หมายเหตุ</th>
-                        <th rowspan="2">Action</th>
-                    </tr>
-                    <tr>
-                        <th>ลดสินค้า%</th>
-                        <th>ลดจำนวน%</th>
-                        <th>ลดพิเศษ%</th>
-                        <th>เร่งเบิก</th>
-                        <th>REB</th>
-                        <th>จำนวน (5G)</th>
-                        <th>ถัง S (2.5G)</th>
-                        <th>ถัง S (2.5G) free</th>
-                        <th>กล. (1G)</th>
-                        <th>กล. (1G) free</th>
-                        <th>กป.(1/4)</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>ลำดับที่</th>
-                        <th>ประเภทสินค้า</th>
-                        <th>รหัสสินค้า</th>
-                        <th>ชื่อ/ชนิดสินค้า</th>
-                        <th>ลดสินค้า%</th>
-                        <th>ลดจำนวน%</th>
-                        <th>ลดพิเศษ%</th>
-                        <th>เครดิต</th>
-                        <th>ลดเงินสด/(เครดิต)</th>
-                        <th>เร่งเบิก</th>
-                        <th>REB</th>
-                        <th>จำนวน (5G)</th>
-                        <th>ถัง S (2.5G)</th>
-                        <th>ถัง S (2.5G) free</th>
-                        <th>กล. (1G)</th>
-                        <th>กล. (1G) free</th>
-                        <th>กป.(1/4)</th>
-                        <th>วันที่ต้องการสินค้า</th>
-                        <th>หมายเหตุ</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
-            </table>
-
-        </div>
-    </div>
-
-    <!--    </div>-->
-
-    <!-- <a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a>
+    <a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a>
     <table id="example" class="display nowrap" style="width:100%">
         <thead>
             <tr>
@@ -202,7 +86,7 @@
                 <th>Action</th>
             </tr>
         </tfoot>
-    </table> -->
+    </table>
 
 </body>
 
@@ -250,6 +134,27 @@
                             </div>
                         </div>
                     </div>
+                    <!-- <div class="form-group">
+                        <label for="name" class="col-sm-6 control-label">ประเภทสินค้า</label>
+                        <div class="col-sm-12">
+                            <select id="product_category" name="product_category" class="form-control" required="">
+                                <option value="WT">WT</option>
+                                <option value="WF">WF</option>
+                                <option value="WW">WW</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label">รหัสสินค้า</label>
+                        <div class="col-sm-12">
+                            <select id="product_code" name="product_code" class="form-control" required="">
+                                <option value="WT-001">WT-001</option>
+                                <option value="WC-301">WC-301</option>
+                                <option value="WC-302">WC-302</option>
+                            </select>
+                        </div>
+                    </div> -->
+
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
@@ -301,7 +206,9 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                     <div class="form-group">
                         <label class="col-sm-6 control-label">จำนวนซื้อ+แถม</label>
                         <div class="row">
@@ -341,6 +248,8 @@
                             <textarea class="form-control" rows="3" id="comment" name="comment"></textarea>
                         </div>
                     </div>
+
+
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-primary" id="btn-save" value="create">Save changes
                         </button>
@@ -353,100 +262,71 @@
     </div>
 </div>
 
+
+
 <!-- edit-modal -->
 <div class="modal fade" id="edit-modal" aria-hidden="true">
-    <div class="modal-dialog  modal-xl">
+    <div class="modal-dialog  modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="userCrudModal"></h4>
             </div>
             <div class="modal-body">
                 <form id="update-form" name="update-form" class="form-horizontal">
-                    <input type="hidden" name="run_id" id="run_id" />
+                    <input type="text" name="run_id" id="run_id" />
                     <input type="hidden" class="form-control" id="mode" name="mode" value="update">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="form-group">
-                                <label for="name" class="col-sm-6 control-label">ประเภทสินค้า</label>
-                                <div class="col-sm-12">
-                                    <select id="product_category" name="product_category" class="form-control" required="">
-                                    <option value="WT">WT</option>
-                                    <option value="WF">WF</option>
-                                    <option value="WW">WW</option>
-                                </select>
-                                </div>
-                            </div>
+                    <div class="form-group">
+                        <label for="name" class="col-sm-6 control-label">ประเภทสินค้า</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="product_category" name="product_category" placeholder="Enter Category" value="" maxlength="50" required="">
                         </div>
-                        <div class="col-sm-3">
-                            <div class="form-group">
-                                <label for="name" class="col-sm-6 control-label">รหัสสินค้า</label>
-                                <div class="col-sm-12">
-                                    <select id="product_code" name="product_code" class="form-control" required="">
-                                        <option value="WT-001">WT-001</option>
-                                        <option value="WC-301">WC-301</option>
-                                        <option value="WC-302">WC-302</option>
-                                    </select>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label">รหัสสินค้า</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="product_code" name="product_code" placeholder="Enter Product code" value="" required="">
                         </div>
-                        <div class="col-sm-6">
-                            <div class="form-group">
-                                <label for="name" class="col-sm-6 control-label">ชื่อ/ชนิดสินค้า</label>
-                                <div class="col-sm-12">
-                                    <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Enter..." value="" required="">
-                                </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label">ชื่อ/ชนิดสินค้า</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Enter Product name" value="" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label">ส่วนลด%</label>
+                        <div class="row">
+                            <div class="col-sm-4" style="padding-left: 30px;">
+                                <input type="text" class="form-control" id="discount_percent1" name="discount_percent1" placeholder="ลดสินค้า %" value="" required="">
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="discount_percent2" name="discount_percent2" placeholder="ลดจำนวน %" value="" required="">
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="discount_percent3" name="discount_percent3" placeholder="ลดพิเศษ %" value="" required="">
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="col-sm-12 control-label">ส่วนลด%</label>
-                                <div class="row">
-                                    <div class="col-sm-4" style="padding-left: 30px;">
-                                        <input type="text" class="form-control" id="discount_percent1" name="discount_percent1" placeholder="สินค้า" value="" required="">
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="text" class="form-control" id="discount_percent2" name="discount_percent2" placeholder="จำนวน" value="" required="">
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input type="text" class="form-control" id="discount_percent3" name="discount_percent3" placeholder="พิเศษ" value="" required="">
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label">เครดิต</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="credit" name="credit" placeholder="Enter Product name" value="" required="">
                         </div>
-                        <div class="col-sm-2">
-                            <div class="form-group">
-                                <label class="col-sm-12 control-label">เครดิต</label>
-                                <div class="col-sm-12">
-                                    <select id="credit" name="credit" class="form-control" required="">
-                                    <option value="30">30</option>
-                                    <option value="60">60</option>
-                                    <option value="90">90</option>
-                                    <option value="120">120</option>
-                                </select>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label">ลดเงินสด/เครดิต</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="cash_credit" name="cash_credit" placeholder="Enter Product name" value="" required="">
                         </div>
-                        <div class="col-sm-2">
-                            <div class="form-group">
-                                <label class="col-sm-12 control-label">ลดเงินสด/เครดิต</label>
-                                <div class="col-sm-12">
-                                    <input type="text" class="form-control" id="cash_credit" name="cash_credit" placeholder="Enter..." value="" required="">
-                                </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label">ส่วนลดเป้า</label>
+                        <div class="row">
+                            <div class="col-sm-6" style="padding-left: 30px;">
+                                <input type="text" class="form-control" id="withdraw" name="withdraw" placeholder="เร่งเบิก" value="" required="">
                             </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-group">
-                                <label class="col-sm-12 control-label">ส่วนลดเป้า</label>
-                                <div class="row">
-                                    <div class="col-sm-6" style="padding-left: 30px;">
-                                        <input type="text" class="form-control" id="withdraw" name="withdraw" placeholder="เร่งเบิก" value="" required="">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="REB" name="REB" placeholder="REB" value="" required="">
-                                    </div>
-                                </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="REB" name="REB" placeholder="REB" value="" required="">
                             </div>
                         </div>
                     </div>
@@ -475,20 +355,23 @@
                                 <input type="text" class="form-control" id="qty_14" name="qty_14" placeholder="กป.(1/4G)/ชุดกป." value="" required="">
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-6 control-label">วันที่ต้องการสินค้า</label>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" id="required_date" name="required_date" placeholder="Enter Product name" value="" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-6 control-label">หมายเหตุ</label>
+                            <div class="col-sm-12">
+                                <textarea class="form-control" rows="3" id="comment" name="comment"></textarea>
+                            </div>
+                        </div>
+
+
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-6 control-label">วันที่ต้องการสินค้า</label>
-                        <div class="col-sm-12">
-                            <input type="text" class="form-control" id="required_date" name="required_date" placeholder="Enter Product name" value="" required="">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-sm-6 control-label">หมายเหตุ</label>
-                        <div class="col-sm-12">
-                            <textarea class="form-control" rows="3" id="comment" name="comment"></textarea>
-                        </div>
-                    </div>
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-primary" id="btn-save" value="create">Save changes
                         </button>
@@ -500,6 +383,7 @@
         </div>
     </div>
 </div>
+
 
 <script>
     var table;
@@ -647,24 +531,24 @@
             d = table.row(row).data();
 
             $('#run_id').val(d.run_id);
-            $('#update-form #product_category').val(d.product_category);
-            $('#update-form #product_code').val(d.product_code);
-            $('#update-form #product_name').val(d.product_name);
-            $('#update-form #discount_percent1').val(d.discount_percent1);
-            $('#update-form #discount_percent2').val(d.discount_percent2);
-            $('#update-form #discount_percent3').val(d.discount_percent2);
-            $('#update-form #credit').val(d.credit);
-            $('#update-form #cash_credit').val(d.cash_credit);
-            $('#update-form #withdraw').val(d.withdraw);
-            $('#update-form #REB').val(d.REB);
-            $('#update-form #qty_5g').val(d.qty_5g);
-            $('#update-form #qty_25g').val(d.qty_25g);
-            $('#update-form #qty_25gfree').val(d.qty_25gfree);
-            $('#update-form #qty_1g').val(d.qty_1g);
-            $('#update-form #qty_1gfree').val(d.qty_1gfree);
-            $('#update-form #qty_14').val(d.qty_14);
-            $('#update-form #required_date').val(d.required_date);
-            $('#update-form #comment').val(d.comment);
+            $('#product_category').val(d.product_category);
+            $('#product_code').val(d.product_code);
+            $('#product_name').val(d.product_name);
+            $('#discount_percent1').val(d.discount_percent1);
+            $('#discount_percent2').val(d.discount_percent2);
+            $('#discount_percent3').val(d.discount_percent2);
+            $('#credit').val(d.credit);
+            $('#cash_credit').val(d.cash_credit);
+            $('#withdraw').val(d.withdraw);
+            $('#REB').val(d.REB);
+            $('#qty_5g').val(d.qty_5g);
+            $('#qty_25g').val(d.qty_25g);
+            $('#qty_25gfree').val(d.qty_25gfree);
+            $('#qty_1g').val(d.qty_1g);
+            $('#qty_1gfree').val(d.qty_1gfree);
+            $('#qty_14').val(d.qty_14);
+            $('#required_date').val(d.required_date);
+            $('#comment').val(d.comment);
 
 
             $('#edit-modal').modal('show');
@@ -682,24 +566,24 @@
     $('#update-form').submit(function(e) {
         e.preventDefault();
 
-        d.product_category = $('#update-form #product_category').val();
-        d.product_code = $('#update-form #product_code').val();
-        d.product_name = $('#update-form #product_name').val();
-        d.discount_percent1 = $('#update-form #discount_percent1').val();
-        d.discount_percent2 = $('#update-form #discount_percent2').val();
-        d.discount_percent2 = $('#update-form #discount_percent3').val();
-        d.credit = $('#update-form #credit').val();
-        d.cash_credit = $('#update-form #cash_credit').val();
-        d.withdraw = $('#update-form #withdraw').val();
-        d.REB = $('#update-form #REB').val();
-        d.qty_5g = $('#update-form #qty_5g').val();
-        d.qty_25g = $('#update-form #qty_25g').val();
-        d.qty_25gfree = $('#update-form #qty_25gfree').val();
-        d.qty_1g = $('#update-form #qty_1g').val();
-        d.qty_1gfree = $('#update-form #qty_1gfree').val();
-        d.qty_14 = $('#update-form #qty_14').val();
-        d.required_date = $('#update-form #required_date').val();
-        d.comment = $('#update-form #comment').val();
+        //d.product_code = $('#product_code').val();
+        d.product_category = $('#product_category').val();
+        d.product_name = $('#product_name').val();
+        d.discount_percent1 = $('#discount_percent1').val();
+        d.discount_percent2 = $('#discount_percent2').val();
+        d.discount_percent2 = $('#discount_percent3').val();
+        d.credit = $('#credit').val();
+        d.cash_credit = $('#cash_credit').val();
+        d.withdraw = $('#withdraw').val();
+        d.REB = $('#REB').val();
+        d.qty_5g = $('#qty_5g').val();
+        d.qty_25g = $('#qty_25g').val();
+        d.qty_25gfree = $('#qty_25gfree').val();
+        d.qty_1g = $('#qty_1g').val();
+        d.qty_1gfree = $('#qty_1gfree').val();
+        d.qty_14 = $('#qty_14').val();
+        d.required_date = $('#required_date').val();
+        d.comment = $('#comment').val();
 
         table
             .row(row)
@@ -725,44 +609,6 @@
         if (confirm("Are You sure want to delete !")) {
             crud_mode = 2;
         }
-    });
-
-    // เลือกเขตการขาย พนักงานขาย
-    $('#generate').click(function() {
-
-        fetch('../ajax/data/SaleRep.txt')
-            .then(function(response) {
-                return response.text();
-            })
-            .then(function(data) {
-
-                //var values = ["dog", "cat", "parrot", "rabbit"];
-
-                var select = $("#SaleRep");
-                var values = data.trim().split(/\r?\n|\r/);
-
-
-                values.forEach(function(row, row_index) {
-                    var table_columns = '';
-                    var columns = row.split('\t'); // split/separate the columns in a row
-
-                    select.append($("<option>")
-                        .prop('value', columns[0])
-                        .attr('data-sales', columns[1])
-                        .text(columns[0]));
-
-                });
-
-
-            });
-
-
-    });
-
-    $('#SaleRep').on('change', function() {
-        console.log($('option:selected', this).attr('data-sales'));
-        $("#sales_name").val($('option:selected', this).attr('data-sales'));
-
     });
 </script>
 

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datatables</title>
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://github.com/downloads/lafeber/world-flags-sprite/flags32.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://github.com/downloads/lafeber/world-flags-sprite/flags32.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+
+    <!-- Boostrap JS/CSS library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <style>
+        .f32 .flag {
+            vertical-align: middle;
+            margin: -8px 0;
+        }
+        
+        progress {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="example" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th rowspan="2">ประเภทสินค้า</th>
+                <th rowspan="2">รหัสสินค้า</th>
+                <th rowspan="2">ชื่อ/ชนิดสินค้า</th>
+                <th colspan="3">ส่วนลด%</th>
+                <th rowspan="2">เครดิต</th>
+                <th rowspan="2">ลดเงินสด/(เครดิต)</th>
+                <th colspan="2">ส่วนลดเป้า</th>
+                <th colspan="6">จำนวนซื้อ+แถม</th>
+                <th rowspan="2">วันที่ต้องการสินค้า</th>
+                <th rowspan="2">หมายเหตุ</th>
+            </tr>
+            <tr>
+                <!-- <th>ประเภทสินค้า</th>
+                <th>รหัสสินค้า</th>
+                <th>ชื่อ/ชนิดสินค้า</th> -->
+                <th>ลดสินค้า%</th>
+                <th>ลดจำนวน%</th>
+                <th>ลดพิเศษ%</th>
+                <!-- <th rowspan="2">เครดิต</th>
+                <th rowspan="2">ลดเงินสด/(เครดิต)</th> -->
+                <th>เร่งเบิก</th>
+                <th>REB</th>
+                <th>จำนวน (5G)</th>
+                <th>ถัง S (2.5G)</th>
+                <th>ถัง S (2.5G) free</th>
+                <th>กล. (1G)</th>
+                <th>กล. (1G) free</th>
+                <th>กป.(1/4)</th>
+                <!-- <th>วันที่ต้องการสินค้า</th>
+                <th>หมายเหตุ</th> -->
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>ประเภทสินค้า</th>
+                <th>รหัสสินค้า</th>
+                <th>ชื่อ/ชนิดสินค้า</th>
+                <th>ลดสินค้า%</th>
+                <th>ลดจำนวน%</th>
+                <th>ลดพิเศษ%</th>
+                <th>เครดิต</th>
+                <th>ลดเงินสด/(เครดิต)</th>
+                <th>เร่งเบิก</th>
+                <th>REB</th>
+                <th>จำนวน (5G)</th>
+                <th>ถัง S (2.5G)</th>
+                <th>ถัง S (2.5G) free</th>
+                <th>กล. (1G)</th>
+                <th>กล. (1G) free</th>
+                <th>กป.(1/4)</th>
+                <th>วันที่ต้องการสินค้า</th>
+                <th>หมายเหตุ</th>
+                <th>Action</th>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+<!-- Edit Modal HTML -->
+<!-- <div id="editItemModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Employee</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-info" value="Save">
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+<div class="modal fade" id="add-modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="userCrudModal"></h4>
+            </div>
+            <div class="modal-body">
+                <form id="add-form" name="add-form" class="form-horizontal">
+                    <input type="hidden" class="form-control" id="mode" name="mode" value="add">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="" maxlength="50" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-12">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" value="" required="">
+                        </div>
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary" id="btn-save" value="create">Save changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // function edit_item() {
+    //     $('#editItemModal').modal('show'); // show bootstrap modal
+    //     // $('.modal-title').text('Edit Item'); // Set Title to Bootstrap modal title
+    // }
+
+    /*  add user model */
+    $('.add-model').click(function() {
+        $('#add-modal').modal('show');
+        //$('#addEmployeeModal').modal('show');
+    });
+
+    $(document).ready(function() {
+        $('#example').DataTable({
+            ajax: '../ajax/data/objects_salary.txt',
+            columns: [{
+                data: 'procuct_category',
+            }, {
+                data: 'product_code',
+            }, {
+                data: 'product_name',
+            }, {
+                data: 'discount_percent1',
+            }, {
+                data: 'discount_percent2',
+            }, {
+                data: 'discount_percent3',
+            }, {
+                data: 'credit',
+            }, {
+                data: 'cash_credit',
+            }, {
+                data: 'withdraw',
+            }, {
+                data: 'REB',
+            }, {
+                data: 'qty_5g',
+            }, {
+                data: 'qty_25g',
+            }, {
+                data: 'qty_25gfree',
+            }, {
+                data: 'qty_1g',
+            }, {
+                data: 'qty_1gfree',
+            }, {
+                data: 'qty_14',
+            }, {
+                data: 'required_date',
+            }, {
+                data: 'comment',
+            }, {
+                data: 'product_code',
+                render: function(data, type, row) {
+                    // return '<!-- Button trigger modal --><!-- Modal --><div class="modal-footer"><button type="button" onclick="edit_item()" id="editItemModal" class="btn btn-secondary" data-dismiss="modal">Edit</button><button type="button" class="btn btn-primary">Save changes</button></div>';
+                    return '<button class="btn btn-primary float-right add-model" onclick="editItem(' + data + ')">Edit</button><button class="btn-delete" data-id="1" onclick="deleteItem(' + data + ')">Delete</button>';
+                }
+            }]
+        });
+    });
+
+    function editItem(data) {
+        alert(data);
+    }
+    // $(document).ready(function() {
+    //     $('#example').DataTable({
+    //         ajax: '../ajax/data/objects_salary.txt',
+    //         columns: [{
+    //             data: 'name'
+    //         }, {
+    //             data: 'position',
+    //             render: function(data, type) {
+    //                 if (type === 'display') {
+    //                     let link = "http://datatables.net";
+
+    //                     if (data[0] < 'H') {
+    //                         link = "http://cloudtables.com";
+    //                     } else if (data[0] < 'S') {
+    //                         link = "http://editor.datatables.net";
+    //                     }
+
+    //                     return '<a href="' + link + '">' + data + '</a>';
+    //                 }
+
+    //                 return data;
+    //             }
+    //         }, {
+    //             className: 'f32', // used by world-flags-sprite library
+    //             data: 'office',
+    //             render: function(data, type) {
+    //                 if (type === 'display') {
+    //                     let country = '';
+
+    //                     switch (data) {
+    //                         case 'Argentina':
+    //                             country = 'ar';
+    //                             break;
+    //                         case 'Edinburgh':
+    //                             country = '_Scotland';
+    //                             break;
+    //                         case 'London':
+    //                             country = '_England';
+    //                             break;
+    //                         case 'New York':
+    //                         case 'San Francisco':
+    //                             country = 'us';
+    //                             break;
+    //                         case 'Sydney':
+    //                             country = 'au';
+    //                             break;
+    //                         case 'Tokyo':
+    //                             country = 'jp';
+    //                             break;
+    //                     }
+
+    //                     return '<span class="flag ' + country + '"></span> ' + data;
+    //                 }
+
+    //                 return data;
+    //             }
+    //         }, {
+    //             data: 'extn',
+    //             render: function(data, type, row, meta) {
+    //                 return type === 'display' ?
+    //                     '<progress value="' + data + '" max="9999"></progress>' :
+    //                     data;
+    //             }
+    //         }, {
+    //             data: "start_date"
+    //         }, {
+    //             data: "salary",
+    //             render: function(data, type) {
+    //                 var number = $.fn.dataTable.render.number(',', '.', 2, '$').display(data);
+
+    //                 if (type === 'display') {
+    //                     let color = 'green';
+    //                     if (data < 250000) {
+    //                         color = 'red';
+    //                     } else if (data < 500000) {
+    //                         color = 'orange';
+    //                     }
+
+    //                     return '<span style="color:' + color + '">' + number + '</span>';
+    //                 }
+
+    //                 return number;
+
+    //             }
+    //         }]
+    //     });
+    // });
+</script>
+
+</html>

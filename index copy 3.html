@@ -28,8 +28,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 
-
-
 </head>
 
 <body>
@@ -49,105 +47,51 @@
         <div class="col-sm-6">
             <a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a>
         </div>
-    </div> -->
-    <br>
+    </div>
+    <br> -->
 
-    <div class="row">
-        <div class="col-md-4" style="padding-left: 30px;"> <img src="images/logo_precision.jpg" width="166" height="75" alt="" /></div>
-        <div class="col-md-4"> <label for="SaleRep">เขตการขาย :</label>
-            <select name="SaleRep" id="SaleRep">
-                </select><br>
-            <label for="sales_name">พนักงานขาย :</label>
-            <input type="text" id="sales_name" name="sales_name" disabled>
-            <div>
-                <button id="generate">Generate</button>
+
+    <div class="container">
+        <h2>Dynamic Tabs</h2>
+        <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+            <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+            <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+            <li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
             </div>
         </div>
-        <div class="col-md-4">รหัสลูกค้า : <input type="text" id="customer_code" name="customer_code"></div>
-
     </div>
 
-    <br>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Customer</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="order-tab" data-toggle="tab" href="#order" role="tab" aria-controls="order" aria-selected="false">Order</a>
-        </li>
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-            <p>รหัสร้านค้า : <br> ชื่อร้านค้า : <br> ที่อยู่ : <br> Tel. : <br> Mobile : <br>
-            </p>
-
-        </div>
-        <div class="tab-pane fade" id="order" role="tabpanel" aria-labelledby="order-tab">
-
-            <a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a>
-            <table id="example" class="display nowrap" style="width:100%">
-                <thead>
-                    <tr>
-                        <th rowspan="2">ลำดับที่</th>
-                        <th rowspan="2">ประเภทสินค้า</th>
-                        <th rowspan="2">รหัสสินค้า</th>
-                        <th rowspan="2">ชื่อ/ชนิดสินค้า</th>
-                        <th colspan="3">ส่วนลด%</th>
-                        <th rowspan="2">เครดิต</th>
-                        <th rowspan="2">ลดเงินสด/(เครดิต)</th>
-                        <th colspan="2">ส่วนลดเป้า</th>
-                        <th colspan="6">จำนวนซื้อ+แถม</th>
-                        <th rowspan="2">วันที่ต้องการสินค้า</th>
-                        <th rowspan="2">หมายเหตุ</th>
-                        <th rowspan="2">Action</th>
-                    </tr>
-                    <tr>
-                        <th>ลดสินค้า%</th>
-                        <th>ลดจำนวน%</th>
-                        <th>ลดพิเศษ%</th>
-                        <th>เร่งเบิก</th>
-                        <th>REB</th>
-                        <th>จำนวน (5G)</th>
-                        <th>ถัง S (2.5G)</th>
-                        <th>ถัง S (2.5G) free</th>
-                        <th>กล. (1G)</th>
-                        <th>กล. (1G) free</th>
-                        <th>กป.(1/4)</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>ลำดับที่</th>
-                        <th>ประเภทสินค้า</th>
-                        <th>รหัสสินค้า</th>
-                        <th>ชื่อ/ชนิดสินค้า</th>
-                        <th>ลดสินค้า%</th>
-                        <th>ลดจำนวน%</th>
-                        <th>ลดพิเศษ%</th>
-                        <th>เครดิต</th>
-                        <th>ลดเงินสด/(เครดิต)</th>
-                        <th>เร่งเบิก</th>
-                        <th>REB</th>
-                        <th>จำนวน (5G)</th>
-                        <th>ถัง S (2.5G)</th>
-                        <th>ถัง S (2.5G) free</th>
-                        <th>กล. (1G)</th>
-                        <th>กล. (1G) free</th>
-                        <th>กป.(1/4)</th>
-                        <th>วันที่ต้องการสินค้า</th>
-                        <th>หมายเหตุ</th>
-                        <th>Action</th>
-                    </tr>
-                </tfoot>
-            </table>
-
-        </div>
-    </div>
-
-    <!--    </div>-->
-
-    <!-- <a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a>
+	<div class="row">
+		<div class="col-md-4" style="padding-left: 30px;"> <img src="images/logo_precision.jpg" width="166" height="75" alt=""/></div>
+		<div class="col-md-4">เขตการขาย<br>พนักงานขาย</div>
+		<div class="col-md-4">รหัสลูกค้า</div>
+<!--		<div class="col-md-4" style="padding-right: 30px;"><a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a></div>-->
+	</div>
+	
+	
+	
+    <a href="javascript:void(0)" class="btn btn-primary float-right add-model"> Add Item </a>
     <table id="example" class="display nowrap" style="width:100%">
         <thead>
             <tr>
@@ -202,7 +146,7 @@
                 <th>Action</th>
             </tr>
         </tfoot>
-    </table> -->
+    </table>
 
 </body>
 

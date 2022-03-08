@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "run_id" : "1",
+      "product_category": "Tiger Nixon",
+      "product_code": "10",
+      "product_name": "320800",
+      "discount_percent1": "3",
+      "discount_percent2": "Edinburgh",
+      "discount_percent3": "5421",
+      "credit": "30",
+      "cash_credit" : "60",
+      "withdraw" : "Test",
+      "REB" : "Demo",
+      "qty_5g" : "10",
+      "qty_25g" : "20",
+      "qty_25gfree" : "2",
+      "qty_1g" : "2",
+      "qty_1gfree" : "1",
+      "qty_14" : "0", 
+      "required_date" : "2022-03-26",
+      "comment" : "test"
+    },
+   {
+      "run_id" : "2",
+      "product_category": "Tiger Nixon",
+      "product_code": "11",
+      "product_name": "320800",
+      "discount_percent1": "3",
+      "discount_percent2": "Edinburgh",
+      "discount_percent3": "5421",
+      "credit": "30",
+      "cash_credit" : "60",
+      "withdraw" : "Test",
+      "REB" : "Demo",
+      "qty_5g" : "10",
+      "qty_25g" : "20",
+      "qty_25gfree" : "2",
+      "qty_1g" : "2",
+      "qty_1gfree" : "1",
+      "qty_14" : "0", 
+      "required_date" : "2022-03-26",
+      "comment" : "test"
+    }
+  ]
+}

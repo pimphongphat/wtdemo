@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+
+    <!-- jquery 3.5.1 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <!-- Boostrap 4.6.1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="container"></div>
+    <label for="SaleRep">เขตการขาย :</label>
+    <select name="SaleRep" id="SaleRep">
+        </select><br>
+    <label for="sales_name">พนักงานขาย :</label>
+    <input type="text" id="sales_name" name="sales_name" disabled>
+    <div>
+        <button id="generate">Generate</button>
+    </div>
+</body>
+
+<script>
+    $('#generate').click(function() {
+
+        fetch('../ajax/data/SaleRep.txt')
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(data) {
+
+                //var values = ["dog", "cat", "parrot", "rabbit"];
+
+                var select = $("#SaleRep");
+                var values = data.trim().split(/\r?\n|\r/);
+
+
+                values.forEach(function(row, row_index) {
+                    var table_columns = '';
+                    var columns = row.split('\t'); // split/separate the columns in a row
+
+                    select.append($("<option>")
+                        .prop('value', columns[0])
+                        .attr('data-sales', columns[1])
+                        .text(columns[0]));
+
+                });
+
+
+            });
+
+
+    });
+
+    $('#SaleRep').on('change', function() {
+        console.log($('option:selected', this).attr('data-sales'));
+        $("#sales_name").val($('option:selected', this).attr('data-sales'));
+
+    });
+</script>
+
+</html>
