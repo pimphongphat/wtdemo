@@ -80,10 +80,27 @@
     </ul>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <p></p>
+            <div class="row">
+                <div class="col-md-1" style="padding-left: 30px;">
+                    <p class="text-right">รหัสร้านค้า : </p>
+                    <p class="text-right">ชื่อร้านค้า : </p>
+                    <p class="text-right">ที่อยู่ : </p>
+                    <p class="text-right">Tel. : </p>
+                    <p class="text-right">Mobile : </p>
+                    <p class="text-right">หมายเหตุ : </p>
 
-            <p>รหัสร้านค้า : <br> ชื่อร้านค้า : <br> ที่อยู่ : <br> Tel. : <br> Mobile : <br>
-            </p>
+                </div>
+                <div class="col-md-11" style="padding-left: 30px;">
+                    <p>C00001</p>
+                    <p>บริษัท แสงเจริญพัฒนาเอ็นเตอร์ไพรส์ จำกัด</p>
+                    <p>438/12-13 ถนนลาดพร้าว แขวงจอมพล เขตจตุจักร จังหวัดกรุงเทพมหานคร 10900</p>
+                    <p>02-9383046-8</p>
+                    <p>087-8988888</p>
+                    <p>ขนส่งที่ใช้ บริษัทส่ง</p>
 
+                </div>
+            </div>
         </div>
         <div class="tab-pane fade" id="order" role="tabpanel" aria-labelledby="order-tab">
 
@@ -100,8 +117,12 @@
                         </th>
                         <th rowspan="2">เครดิต</th>
                         <th rowspan="2">ลดเงินสด/(เครดิต)</th>
-                        <th colspan="2">ส่วนลดเป้า</th>
-                        <th colspan="6">จำนวนซื้อ+แถม</th>
+                        <th colspan="2">
+                            <p class="text-center">ส่วนลดเป้า</p>
+                        </th>
+                        <th colspan="6">
+                            <p class="text-center">จำนวนซื้อ+แถม</p>
+                        </th>
                         <th rowspan="2">วันที่ต้องการสินค้า</th>
                         <th rowspan="2">หมายเหตุ</th>
                         <th rowspan="2">Action</th>
@@ -798,6 +819,12 @@
             // placeholder: 'Select an option',
             width: '100px'
         });
+
+        $('#product_category').select2({
+            // placeholder: 'Select an option',
+            width: '100px'
+        });
+
     });
 </script>
 
